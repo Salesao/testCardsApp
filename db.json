@@ -1,0 +1,176 @@
+{
+  "cards": [
+    {
+      "card_id": 123,
+      "reviewer_id": 2,
+      "name": "Помыть посуду",
+      "reward": 1000,
+      "photo_required": true,
+      "video_required": false,
+      "schedule": [true, false, true, true, false, false, false],  
+      "period_start": "2023-04-17 10:00:00",
+      "period_stop": null,
+      "type": "TASKS"
+    },
+    {
+      "card_id": 456,
+      "reviewer_id": 5,
+      "name": "Погулять с собакой",
+      "reward": 500,
+      "photo_required": false,
+      "video_required": true,
+      "schedule": [false, true, false, true, true, true, false],
+      "period_start": "2023-05-12 12:00:00",
+      "period_stop": null,
+      "type": "ALL"
+    },
+    {
+      "card_id": 789,
+      "reviewer_id": 3,
+      "name": "Сделать уборку",
+      "reward": 1500,
+      "photo_required": true,
+      "video_required": false,
+      "schedule": [true, false, true, false, true, false, true],
+      "period_start": "2023-06-01 09:00:00",
+      "period_stop": null,
+      "type": "COURSES"
+    },
+    {
+      "card_id": 246,
+      "reviewer_id": 4,
+      "name": "Приготовить завтрак",
+      "reward": 300,
+      "photo_required": false,
+      "video_required": true,
+      "schedule": [true, false, true, false, false, true, false],
+      "period_start": "2023-04-12 07:00:00",
+      "period_stop": null,
+      "type": "TASKS"
+    },
+    {
+      "card_id": 135,
+      "reviewer_id": 6,
+      "name": "Почитать книгу",
+      "reward": 200,
+      "photo_required": true,
+      "video_required": false,
+      "schedule": [false, true, false, false, true, true, true],
+      "period_start": "2023-05-03 18:00:00",
+      "period_stop": null,
+      "type": "ALL"
+    },
+    {
+      "card_id": 531,
+      "reviewer_id": 9,
+      "name": "Помыть машину",
+      "reward": 1200,
+      "photo_required": false,
+      "video_required": true,
+      "schedule": [true, false, false, true, false, true, false],
+      "period_start": "2023-08-11 16:00:00",
+      "period_stop": null,
+      "type": "TASKS" 
+    },
+    {
+      "card_id": 987,
+      "reviewer_id": 8,
+      "name": "Почистить ковры",
+      "reward": 700,
+      "photo_required": true,
+      "video_required": false,
+      "schedule": [false, true, true, false, true, false, false],
+      "period_start": "2023-09-03 10:30:00",
+      "period_stop": null,
+      "type": "COURSES"
+    },
+    {  
+      "card_id": 654,
+      "reviewer_id": 1,
+      "name": "Полить цветы",
+      "reward": 100,
+      "photo_required": false,
+      "video_required": true,
+      "schedule": [true, false, false, false, true, true, true],
+      "period_start": "2023-04-25 12:15:00",
+      "period_stop": null,
+      "type": "ALL"
+    },
+    {
+      "card_id": 159,
+      "reviewer_id": 10,
+      "name": "Помыть окна",
+      "reward": 900,
+      "photo_required": true,
+      "video_required": false,
+      "schedule": [true, true, false, false, false, true, false],
+      "period_start": "2023-07-05 17:45:00",
+      "period_stop": null,
+      "type": "TASKS"
+    },
+    {
+      "card_id": 987, 
+      "reviewer_id": 8,
+      "name": "Почистить ковры",
+      "reward": 700,
+      "photo_required": true,
+      "video_required": false,
+      "schedule": [false, true, true, false, true, false, false],
+      "period_start": "2023-09-03 10:30:00",
+      "period_stop": null,
+      "type": "COURSES"
+    },
+  
+    {
+      "card_id": 654,
+      "reviewer_id": 1,
+      "name": "Полить цветы",
+      "reward": 100,
+      "photo_required": false,
+      "video_required": true,
+      "schedule": [true, false, false, false, true, true, true],
+      "period_start": "2023-04-25 12:15:00",
+      "period_stop": null,
+      "type": "ALL"
+    },
+  
+    {
+      "card_id": 159,
+      "reviewer_id": 10,
+      "name": "Помыть окна",
+      "reward": 900,
+      "photo_required": true,
+      "video_required": false,
+      "schedule": [true, true, false, false, false, true, false],
+      "period_start": "2023-07-05 17:45:00",
+      "period_stop": null,
+      "type": "TASKS"
+    },
+    
+    {
+      "card_id": 357,
+      "reviewer_id": 11,
+      "name": "Погладить одежду",
+      "reward": 250,
+      "photo_required": false,
+      "video_required": true,
+      "schedule": [false, false, true, true, false, false, true],
+      "period_start": "2023-06-17 09:30:00",
+      "period_stop": null,
+      "type": "COURSES"
+    },
+    
+    {
+      "card_id": 678,
+      "reviewer_id": 12, 
+      "name": "Вынести мусор",
+      "reward": 150,
+      "photo_required": true,
+      "video_required": false,
+      "schedule": [true, false, false, true, false, false, true],
+      "period_start": "2023-05-06 18:45:00",
+      "period_stop": null,
+      "type": "TASKS"
+    }
+  ]
+}
