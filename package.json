@@ -16,6 +16,7 @@
     "firstInstallWindows": "npm i",
     "firstInstallMac": "npm run firstInstallWindows && npm run podInstall",
     "firstInstallMacM1": "npm run firstInstallWindows && npm run podIArch",
+    "build:android:apk": "cd android && ./gradlew assembleRelease && cd ..",
     "regenerateKeystore": "cd android && cd app && rm -rf App_cards.keystore && cd .. && cd .. && keytool -genkey -v -keystore App_cards.keystore -alias D42yCK#J1y -keyalg RSA -keysize 2048 -validity 10000 && mv App_cards.keystore android/app"
   },
   "dependencies": {

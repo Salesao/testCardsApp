@@ -9,10 +9,15 @@ import { CardComponent } from './CardComponent';
 
 interface ICardsList extends IScrollViewProps {
 	myCards: ICard[];
+	isLoadingGetCards?: boolean;
 }
 
-export const CardsList: React.FC<ICardsList> = ({ myCards, ...props }) => {
-	const { isLoadingGetCards, handlerOpenCards } = useCardsContext();
+export const CardsList: React.FC<ICardsList> = ({
+	myCards,
+	isLoadingGetCards = false,
+	...props
+}) => {
+	const { handlerOpenCards } = useCardsContext();
 
 	const renderEmptyComponent = () => {
 		if (isLoadingGetCards) {
@@ -37,8 +42,8 @@ export const CardsList: React.FC<ICardsList> = ({ myCards, ...props }) => {
 			_contentContainerStyle={{
 				p: 4,
 			}}
-			keyExtractor={({ card_id }) => String(card_id)}
-			data={myCards}
+			keyExtractor={(_, idx) => String(idx)}
+			data={isLoadingGetCards ? [] : myCards}
 			renderItem={renderCards}
 			ListEmptyComponent={renderEmptyComponent}
 			ItemSeparatorComponent={() => (

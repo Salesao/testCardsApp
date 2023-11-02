@@ -1,6 +1,7 @@
 import { fetchCards } from '#api/fetchCards';
 import { useEffectOnce } from '#hooks/useEffectOnce';
 import { ICard, TNullOrAny, TTypeCard } from '#types/card';
+import { addCard } from '#utils/addCard';
 import React, { createContext, useCallback, useContext, useState } from 'react';
 import { Alert, AlertButton } from 'react-native';
 
@@ -13,8 +14,9 @@ export interface ICardsContext {
 		callback?: () => void,
 	) => () => void;
 	isLoadingGetCards: boolean;
-	handlerGetCards: () => Promise<void>;
+	handlerGetCards: (isLoader?: boolean) => Promise<void>;
 	handlerOpenCards: (card: ICard) => void;
+	isStartInterval: boolean;
 }
 
 const CardsContext = createContext<TNullOrAny<ICardsContext>>(null);
@@ -37,11 +39,15 @@ export const CardsContextProvider: React.FC<ICardsContextProvider> = ({
 		ICardsContext['favoriteCards']
 	>([]);
 	const [isLoadingGetCards, setIsLoadingGetCards] = useState(true);
+	const [isStartInterval, setIsTimeInterval] = useState(false);
 
 	const handlerAddFavoriteCard = useCallback(
-		(card: ICard, callback?: () => void) => {
+		(
+			card: Omit<ICard, 'card_id' | 'photo_required' | 'schedule'>,
+			callback?: () => void,
+		) => {
 			return () => {
-				setFavoriteCards(prevCard => [...prevCard, card]);
+				setFavoriteCards(addCard(card));
 				callback?.();
 			};
 		},
@@ -60,15 +66,16 @@ export const CardsContextProvider: React.FC<ICardsContextProvider> = ({
 		[],
 	);
 
-	const handlerGetCards = useCallback(async () => {
-		setIsLoadingGetCards(true);
+	const handlerGetCards = useCallback(async (isLoader: boolean = true) => {
+		isLoader && setIsLoadingGetCards(true);
 		try {
 			const cardsFetch = await fetchCards();
-			setCards(cardsFetch);
+			setCards(cardsFetch.filter(filterCardByType('TASKS')));
 		} catch (error) {
 			console.log(error);
 		} finally {
-			setIsLoadingGetCards(false);
+			isLoader && setIsLoadingGetCards(false);
+			console.log('get was');
 		}
 	}, []);
 
@@ -110,7 +117,9 @@ export const CardsContextProvider: React.FC<ICardsContextProvider> = ({
 	);
 
 	useEffectOnce(() => {
-		handlerGetCards();
+		handlerGetCards().then(() => {
+			setIsTimeInterval(true);
+		});
 	});
 
 	return (
@@ -123,6 +132,7 @@ export const CardsContextProvider: React.FC<ICardsContextProvider> = ({
 				handlerGetCards,
 				isLoadingGetCards,
 				handlerOpenCards,
+				isStartInterval,
 			}}
 		>
 			{children}

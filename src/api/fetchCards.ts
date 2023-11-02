@@ -1,9 +1,7 @@
 import { ICard } from '#types/card';
-import { BASE_API } from '@env';
+import { apiRequest } from './api';
 
 export const fetchCards = async () => {
-	const cards: ICard[] = await fetch(BASE_API + '/cards').then(res =>
-		res.json(),
-	);
+	const cards: ICard[] = await apiRequest('/cards');
 	return cards;
 };
