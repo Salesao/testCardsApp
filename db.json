@@ -73,7 +73,7 @@
       "type": "TASKS" 
     },
     {
-      "card_id": 987,
+      "card_id": 1,
       "reviewer_id": 8,
       "name": "Почистить ковры",
       "reward": 700,
@@ -85,7 +85,7 @@
       "type": "COURSES"
     },
     {  
-      "card_id": 654,
+      "card_id": 2,
       "reviewer_id": 1,
       "name": "Полить цветы",
       "reward": 100,
@@ -97,7 +97,7 @@
       "type": "ALL"
     },
     {
-      "card_id": 159,
+      "card_id": 3,
       "reviewer_id": 10,
       "name": "Помыть окна",
       "reward": 900,
@@ -122,7 +122,7 @@
     },
   
     {
-      "card_id": 654,
+      "card_id": 2,
       "reviewer_id": 1,
       "name": "Полить цветы",
       "reward": 100,
@@ -135,7 +135,7 @@
     },
   
     {
-      "card_id": 159,
+      "card_id": 3,
       "reviewer_id": 10,
       "name": "Помыть окна",
       "reward": 900,

@@ -41,7 +41,9 @@ export const CardsList: React.FC<ICardsList> = ({ myCards, ...props }) => {
 			data={myCards}
 			renderItem={renderCards}
 			ListEmptyComponent={renderEmptyComponent}
-			ItemSeparatorComponent={() => <Box my={2} />}
+			ItemSeparatorComponent={() => (
+				<Box my={4} borderTopWidth={1} borderTopColor={COLORS.gray300} />
+			)}
 			{...props}
 		/>
 	);
