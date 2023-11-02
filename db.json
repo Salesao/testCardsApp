@@ -85,7 +85,7 @@
       "type": "COURSES"
     },
     {  
-      "card_id": 2,
+      "card_id": 9,
       "reviewer_id": 1,
       "name": "Полить цветы",
       "reward": 100,
@@ -97,7 +97,7 @@
       "type": "ALL"
     },
     {
-      "card_id": 3,
+      "card_id": 4,
       "reviewer_id": 10,
       "name": "Помыть окна",
       "reward": 900,
